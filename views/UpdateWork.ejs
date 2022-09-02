@@ -1,0 +1,26 @@
+<%- include('header') -%>
+<%- include('bar') -%>
+<form method="POST" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                
+                <h2>Add New</h2>
+                <form>
+                    <h2>Work:</h2>
+                    <div class = "form-group">
+                        <label for="work" class = "form-label">New Work</label > 
+                        <input  class="form-control" type= "file" id= "work" name = "work" > 
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Descreption</label>
+                        <input type="text" class="form-control" id="description" name="description">
+                    </div>
+                    <a class="btn btn-primary" href="">Mentés</a>
+                    <a class="btn btn-link" href="">Mégsem</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+<%- include('footer') -%>

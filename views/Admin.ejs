@@ -1,0 +1,17 @@
+<%- include('header') -%>
+<div class="container">
+
+            <h2>Admin</h2>
+            <% if (typeof error !== 'undefined') { %>
+                <div class="alert alert-danger"><%= error %></div>
+            <% } %>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="pass">Jelszó</label>
+                    <input type="password" class="form-control" id="pass" name="password">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Belépés"/>
+            </form>
+</div>
+
+<%- include('footer') -%>

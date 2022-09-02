@@ -1,0 +1,44 @@
+<%- include('header') -%>
+<%- include('bar') -%>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>My Works:</h2>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>
+                        Type
+                    </th>
+                    
+                    <th>
+                        Time Type
+                    </th>
+
+                    <th>
+                        &nbsp;
+                    </th>
+                </tr>
+                <% categorys.forEach(function(oneCategory){ %>
+                <tr>
+                    <td>
+                        
+                        <%= oneCategory.name %>
+                    </td>
+                    <td>
+                        <%= oneCategory.timetype %>
+                        
+                    </td>
+                    <td style="width:30px;white-space: nowrap">
+                        <a href="/work/<%= oneCategory._id %>" class="btn btn-sm btn-primary">See</a>
+                        <a href="/category/edit/<%= oneCategory._id %>" class="btn btn-sm btn-primary"><i class="far fa-edit"></i></a>
+                        <a href="/category/del/<%= oneCategory._id %>" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            <br/>
+            <a href="/category/new" class="btn btn-block btn-primary">New Category</a>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

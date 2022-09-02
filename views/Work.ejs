@@ -1,0 +1,44 @@
+<%- include('header') -%>
+<%- include('bar') -%>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>3D </h2>
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th>
+                        Work
+                    </th>
+                    
+                    <th>
+                        Descreption
+                    </th>
+
+                    <th>
+                        &nbsp;
+                    </th>
+                </tr>
+                <% works.forEach(function(oneWork){ %>
+                <tr>
+                    <td>
+                        <img src="/workstore/<%=oneWork.name%>" alt="" width="500" height="350" >
+                       
+                    </td>
+                    <td>
+                        <%=oneWork.description%>
+                        
+                    </td>
+                    <td style="width:30px;white-space: nowrap">
+                        <!--<a href="SeeWork.html" class="btn btn-sm btn-primary">See</a> -->
+                        <a href="/work/<%=category._id%>/edit/<%=oneWork._id%>" class="btn btn-sm btn-primary"><i class="far fa-edit"></i></a>
+                        <a href="/work/<%=category._id%>/del/<%=oneWork._id%>" class="btn btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                <% }); %>
+            </table>
+            <br/>
+            <a href="/work/<%=category._id%>/new" class="btn btn-block btn-primary">New Work</a>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

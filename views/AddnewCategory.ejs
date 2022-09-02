@@ -1,0 +1,31 @@
+<%- include('header') -%>
+<%- include('bar') -%>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            
+            <h2> <% if (typeof category === 'undefined') { %>
+                Add new
+            <% }else{ %>
+                Edit
+            <% } %></h2>
+            <form method="POST">
+                <h2>Category:</h2>
+                <div class="form-group">
+                    <label for="name">Category Name</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                    value="<%= (typeof category === 'undefined')?'': category.name%>">
+                </div>
+                <div class="form-group">
+                    <label for="timetype">Time type</label>
+                    <input type="text" class="form-control" id="timetype" name="timetype"
+                    value="<%= (typeof category === 'undefined')?'': category.timetype%>">
+                </div>
+                
+                <input type="submit" class="btn btn-primary" value="Mentés"/>
+                <a class="btn btn-link" href="/category">Mégsem</a>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>
