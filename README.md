@@ -38,6 +38,6 @@ This project is a university assignment that involves creating a full-stack webs
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/Haragos99/szoj-hf-MyWork)
+   git clone https://github.com/Haragos99/szoj-hf-MyWork
    cd szoj-hf-MyWork
 
